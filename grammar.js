@@ -166,7 +166,7 @@ module.exports = grammar({
       $.match_expression,
     ),
 
-    return_statement: $ => seq('return', optional($._expression)),
+    return_statement: $ => prec.right(seq('return', optional($._expression))),
     expression_statement: $ => $._expression,
 
     if_expression: $ => seq(
@@ -190,7 +190,6 @@ module.exports = grammar({
       $.number_literal,
       $.boolean_literal,
       $.null_literal,
-      $.identifier,
       $.call_expression,
       $.field_access,
       $.binary_expression,
