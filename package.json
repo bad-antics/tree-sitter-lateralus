@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-lateralus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tree-sitter grammar for the Lateralus systems language",
   "main": "bindings/node",
   "keywords": ["tree-sitter", "parser", "lateralus", "ltl"],
