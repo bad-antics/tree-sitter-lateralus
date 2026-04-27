@@ -1,0 +1,23 @@
+// Sample Lateralus file used for tree-sitter parser tests.
+import hal::serial
+import kernel::scheduler
+
+const KERNEL_VERSION = "0.1.0"
+
+struct KernelState {
+    booted: bool,
+    uptime: int,
+}
+
+pub fn kernel_main() -> int {
+    serial::log("hello")
+    let mut state = KernelState { booted: true, uptime: 0 }
+    state.uptime
+        |> tick
+        |> log
+    return 0
+}
+
+fn tick(t: int) -> int {
+    return t + 1
+}

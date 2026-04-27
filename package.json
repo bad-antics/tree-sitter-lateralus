@@ -1,0 +1,26 @@
+{
+  "name": "tree-sitter-lateralus",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for the Lateralus systems language",
+  "main": "bindings/node",
+  "keywords": ["tree-sitter", "parser", "lateralus", "ltl"],
+  "author": "bad-antics",
+  "license": "MIT",
+  "homepage": "https://github.com/bad-antics/tree-sitter-lateralus",
+  "repository": { "type": "git", "url": "https://github.com/bad-antics/tree-sitter-lateralus.git" },
+  "tree-sitter": [
+    {
+      "scope": "source.lateralus",
+      "file-types": ["ltl"],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^(lateralus|ltl)$"
+    }
+  ],
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.0"
+  },
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  }
+}
